@@ -1,45 +1,52 @@
-# Hydrogen template: Skeleton
+# Gadget Imports Store – Playground Hydrogen
 
-Hydrogen is Shopify’s stack for headless commerce. Hydrogen is designed to dovetail with [Remix](https://remix.run/), Shopify’s full stack web framework. This template contains a **minimal setup** of components, queries and tooling to get started with Hydrogen.
+Este repositório é um **playground de Hydrogen** criado para:
 
-[Check out Hydrogen docs](https://shopify.dev/custom-storefronts/hydrogen)
-[Get familiar with Remix](https://remix.run/docs/en/v1)
+- **Explorar funcionalidades do Hydrogen + Remix + Oxygen**
+- **Testar integrações e APIs da Shopify (Storefront / Customer Account API)**
+- **Servir como preparação para entrevistas**, simulando um projeto real de storefront headless
 
-## What's included
+Não é um template genérico; é um ambiente de experimentação. O código pode conter rotas e componentes apenas para teste de features, sem compromisso com design ou UX finais.
 
-- Remix
-- Hydrogen
-- Oxygen
+## Tech stack
+
+- Hydrogen (Shopify)
+- Remix / React Router
+- Oxygen / Mini-Oxygen
 - Vite
-- Shopify CLI
-- ESLint
-- Prettier
-- GraphQL generator
-- TypeScript and JavaScript flavors
-- Minimal setup of components and routes
+- TypeScript
+- ESLint + Prettier
 
-## Getting started
+## Requisitos
 
-**Requirements:**
+- Node.js `>= 18.0.0`
+- pnpm (o projeto usa `pnpm` como package manager)
 
-- Node.js version 18.0.0 or higher
+## Instalação
 
 ```bash
-pnpm create @shopify/hydrogen@latest
+pnpm install
 ```
 
-## Building for production
+## Scripts
+
+- `pnpm run dev` – servidor de desenvolvimento
+- `pnpm run build` – build de produção
+- `pnpm run preview` – preview do build
+- `pnpm run lint` – lint do código
+- `pnpm run typecheck` – typecheck com TypeScript
+
+## Notas de ambiente
+
+- Copie `.env.example` para `.env` e preencha os valores:
 
 ```bash
-pnpm run build
+cp .env.example .env
 ```
 
-## Local development
+- É obrigatório definir um `SESSION_SECRET` válido, senão o app lança erro ao iniciar (sessões de usuário).
 
-```bash
-pnpm run dev
-```
+## Links úteis
 
-## Setup for using Customer Account API (`/account` section)
-
-Follow step 1 and 2 of <https://shopify.dev/docs/custom-storefronts/building-with-the-customer-account-api/hydrogen#step-1-set-up-a-public-domain-for-local-development>
+- Docs Hydrogen: https://shopify.dev/custom-storefronts/hydrogen
+- Docs Remix / React Router: https://reactrouter.com
