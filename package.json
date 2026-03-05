@@ -3,6 +3,7 @@
   "private": true,
   "sideEffects": false,
   "version": "2025.7.0",
+  "packageManager": "pnpm@10.30.3",
   "type": "module",
   "scripts": {
     "build": "shopify hydrogen build --codegen",
